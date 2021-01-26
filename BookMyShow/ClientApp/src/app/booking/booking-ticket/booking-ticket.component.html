@@ -1,0 +1,35 @@
+
+
+<div class="d-flex flex-column">
+  <div class="ticket m-2 p-2" >
+    <div class=" d-flex">
+      <div class=" mr-2"> <strong>Movie Name:</strong> </div>
+      <div>{{movieName}}</div>
+    </div>
+    <div class=" d-flex">
+      <div class=" mr-2"> <strong>Theater Name:</strong> </div>
+      <div>{{theaterName}}</div>
+    </div>
+    <div class=" d-flex">
+      <div class=" mr-2"> <strong>Hall Name:</strong> </div>
+      <div>{{hallName}}</div>
+    </div>
+    <div class=" d-flex">
+      <div class=" mr-2"> <strong>Show Timing:</strong> </div>
+      <div>{{showTiming}}</div>
+    </div>
+    <div class=" d-flex">
+      <div class=" mr-2"> <strong>Show Date:</strong> </div>
+      <div>{{ShowDate | date:'fullDate'}}</div>
+    </div>
+    <div class=" d-flex">
+      <div class=" mr-2"> <strong>Seat Number:</strong> </div>
+      <div *ngFor="let seat of seatSelected">
+        <span class="pr-1">{{seat}},</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+

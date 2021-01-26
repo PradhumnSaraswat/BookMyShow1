@@ -1,0 +1,48 @@
+
+<button class="btn btn-primary m-3" style="border-radius: 20px; background-color: #04c582;border-color: #007bff" (click)="bookTicket()">Book Ticket</button>
+
+<table class="mx-auto">
+  <tr>
+    <td>Booked Seat</td>
+    <td>
+      <!--Booked seat-->
+      <div class="bookedSeat">
+        <div class="m-2">
+        </div>
+      </div>
+    </td>
+    <td>Selected seat</td>
+    <td>
+      <!--Selected seat-->
+      <div class="selectedSeat">
+        <div class="m-2">
+
+        </div>
+      </div>
+    </td>
+    <td>Avaliable Seat</td>
+    <td>
+      <div class="seat">
+        <div class="m-2">
+
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<table class="mx-auto">
+  <tr *ngFor="let item of [].constructor(totalRow); let row = index">
+    <td *ngFor="let item of [].constructor(5); let seat = index">
+      <div [ngClass]="isSeatBooked(row*5 + seat + 1)? 'bookedSeat' : isSeatSelected(row*5 + seat + 1)? 'selectedSeat' : 'seat' " (click)="selectSeat(row*5 + seat + 1)">
+        <div class="m-2">
+          {{row*5 + seat + 1}}
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
+
+
+
+
