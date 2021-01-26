@@ -1,0 +1,4 @@
+E:\task\BookMyShow\BookMyShowServices\bin\Debug\netstandard2.0\BooKMyShowModel.dll
+E:\task\BookMyShow\BookMyShowServices\obj\Debug\netstandard2.0\BookMyShowServices.AssemblyInfoInputs.cache
+E:\task\BookMyShow\BookMyShowServices\obj\Debug\netstandard2.0\BookMyShowServices.AssemblyInfo.cs
+E:\task\BookMyShow\BookMyShowServices\obj\Debug\netstandard2.0\BookMyShowServices.csprojAssemblyReference.cache

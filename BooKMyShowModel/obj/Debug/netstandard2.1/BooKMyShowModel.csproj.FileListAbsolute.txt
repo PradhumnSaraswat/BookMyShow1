@@ -1,0 +1,9 @@
+E:\task\BookMyShow\BooKMyShowModel\bin\Debug\netstandard2.1\BooKMyShowModel.deps.json
+E:\task\BookMyShow\BooKMyShowModel\bin\Debug\netstandard2.1\BooKMyShowModel.dll
+E:\task\BookMyShow\BooKMyShowModel\bin\Debug\netstandard2.1\BooKMyShowModel.pdb
+E:\task\BookMyShow\BooKMyShowModel\obj\Debug\netstandard2.1\BooKMyShowModel.csprojAssemblyReference.cache
+E:\task\BookMyShow\BooKMyShowModel\obj\Debug\netstandard2.1\BooKMyShowModel.AssemblyInfoInputs.cache
+E:\task\BookMyShow\BooKMyShowModel\obj\Debug\netstandard2.1\BooKMyShowModel.AssemblyInfo.cs
+E:\task\BookMyShow\BooKMyShowModel\obj\Debug\netstandard2.1\BooKMyShowModel.csproj.CoreCompileInputs.cache
+E:\task\BookMyShow\BooKMyShowModel\obj\Debug\netstandard2.1\BooKMyShowModel.dll
+E:\task\BookMyShow\BooKMyShowModel\obj\Debug\netstandard2.1\BooKMyShowModel.pdb
