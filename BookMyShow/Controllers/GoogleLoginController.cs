@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace BookMyShow.Controllers
 {
+    [AllowAnonymous, Route("account")]
     public class GoogleLoginController : Controller
     {
         public string Index()
@@ -17,18 +19,19 @@ namespace BookMyShow.Controllers
             return "This is Index action method of GoogleLoginController";
         }
 
-
+        
+        [Route("google-login")]
         public IActionResult GoogleLogin()
         {
             var properties = new AuthenticationProperties { RedirectUri = Url.Action("GoogleResponse") };
             return Challenge(properties, GoogleDefaults.AuthenticationScheme);
         }
 
-
+        [Route("google-response")]
         public async Task<IActionResult> GoogleResponse()
         {
-            var result = await HttpContext.AuthenticateAsync(JwtBearerDefaults.AuthenticationScheme);
-
+            var result = await HttpContext.AuthenticateAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+/*
             var claims = result.Principal.Identities
                 .FirstOrDefault().Claims.Select(claim => new
                 {
@@ -37,8 +40,9 @@ namespace BookMyShow.Controllers
                     claim.Type,
                     claim.Value
                 });
-
-            return Json(claims);
+*/
+            return Ok(new { result });
         }
     }
 }
+
