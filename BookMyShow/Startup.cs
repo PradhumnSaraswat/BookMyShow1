@@ -18,6 +18,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.AspNetCore.Authentication.OAuth;
 using Microsoft.Owin.Security.OAuth;
 using Microsoft.Owin;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace BookMyShow
 {
@@ -82,7 +83,8 @@ namespace BookMyShow
             {
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                 x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-                x.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+                //x.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
             }).AddJwtBearer(x => {
                 x.RequireHttpsMetadata = false;
                 x.SaveToken = false;
